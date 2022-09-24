@@ -1,0 +1,297 @@
+* {
+  font-family: "Clash Display", sans-serif;
+  color: #fefefe;
+  scroll-behavior: smooth;
+}
+canvas {
+  position: fixed;
+  opacity: 0.1;
+  z-index: 9999;
+  pointer-events: none;
+  user-select: none;
+}
+/* Menú */
+.menu {
+  width: 25%;
+  height: auto;
+  position: fixed;
+  z-index: 9999;
+  margin-top: 87vh;
+  left: 37%;
+  right: 37%;
+  padding: 1.5vh 1vw 1.5vh 1vw;
+
+  border-radius: 15px;
+  background: rgba(58, 57, 57, 0.5);
+  backdrop-filter: blur(5px);
+
+  font-weight: 500;
+}
+li {
+  font-size: 1.2vw;
+  list-style-type: none;
+}
+.nav-item:hover {
+  color: #fefefe59;
+}
+
+/* Bienvenida */
+.bienvenida {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.wrapper {
+  width: 100%;
+  height: auto;
+  padding-left: 5%;
+}
+.bienvenida h1 {
+  font-size: 5vw;
+}
+.soyDes {
+  font-weight: bold;
+}
+.itemswrapper {
+  font-size: 1.2vw;
+  font-weight: 400;
+}
+/* sobre mi */
+.sobremi {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.presentacion {
+  height: 100vh;
+}
+
+.whoim {
+  font-size: 4vw;
+}
+
+.imgSobreMi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgYo {
+  width: 90%;
+  filter: grayscale(100%);
+}
+
+.skills {
+  font-size: 1.2vw;
+}
+.mainName,
+.titulo {
+  color: #fffc0e;
+  font-style: italic;
+  font-weight: 600;
+}
+.infoConteiner {
+  width: 25%;
+}
+.info {
+  font-size: 1.2vw;
+}
+
+/* Mi trabajo */
+.myWork {
+  width: 100%;
+  height: auto;
+}
+.proyecto {
+  width: 80%;
+  height: auto;
+  margin-bottom: 5%;
+}
+.foto {
+  width: 50%;
+}
+.imgProyecto {
+  width: 100%;
+  transition: all 100ms;
+}
+.tituloProyecto {
+  width: 50%;
+  font-size: 1.3vw;
+}
+
+.tecnologias {
+  width: 100%;
+  height: 20vh;
+}
+.icon {
+  width: 2.5vw;
+  padding-left: 5%;
+  transition: all 100ms;
+  fill: #504d4d;
+}
+
+/* contatco */
+.contact {
+  width: 100%;
+  height: 100vh;
+}
+.listo {
+  font-size: 1.3vw;
+}
+.email {
+  color: white;
+  font-size: 5vw;
+  font-weight: 700;
+  transition: all 50ms;
+}
+.email:hover {
+  color: #fffc0e;
+  text-decoration: none;
+}
+
+#cohete {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.email:hover #cohete {
+  transition: transform 0.3s ease;
+  transform: translate(390%, -80%);
+}
+
+.iconContacto {
+  width: 5vw;
+  padding-left: 5%;
+  transition: all 100ms;
+  fill: #504d4d;
+}
+
+.iconContacto:hover {
+  fill: #fffc0e;
+}
+
+/* responsive */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .menu {
+    width: 60%;
+    left: 20%;
+    right: 20%;
+    padding: 1.5vh 1vw 1.5vh 1vw;
+  }
+  li {
+    font-size: 3vw;
+  }
+  /* bienvenida */
+  .bienvenida h1 {
+    font-size: 9vw;
+  }
+  .soyDes {
+    font-weight: bold;
+  }
+  .itemswrapper {
+    font-size: 3vw;
+  }
+  /* sobre mi  */
+  .presentacion {
+    justify-content: start;
+    align-items: flex-start;
+    height: auto;
+  }
+  .whoim {
+    padding: 0;
+  }
+  .infoConteiner {
+    width: 50%;
+  }
+  .info {
+    font-size: 3vw;
+  }
+  .skills {
+    font-size: 3vw;
+  }
+  .tecnologias {
+    height: auto;
+  }
+/* proyectos */
+  .foto {
+    width: 100%;
+  }
+
+  .proyecto{
+    width: 90%;
+  }
+  .tituloProyecto {
+    width: 80%;
+    font-size: 4vw;
+  }
+  /* contacto */
+  .listo {
+    font-size: 3.5vw;
+  }
+  .email {
+    font-size: 7vw;
+  }
+  .icon {
+    width: 5vw;
+  }
+  .iconContacto {
+    width
+    : 8vw;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  .menu {
+    width: 40%;
+    left: 30%;
+    right: 30%;
+    padding: 1.5vh 1vw 1.5vh 1vw;
+  }
+  li {
+    font-size: 2vw;
+    list-style-type: none;
+  }
+  /*  */
+  .bienvenida h1 {
+    font-size: 8vw;
+  }
+  .itemswrapper {
+    font-size: 2vw;
+  }
+  .presentacion {
+    height: auto;
+  }
+  .info {
+    font-size: 2vw;
+  }
+  .skills {
+    font-size: 2vw;
+  }
+  /* proyecto */
+  .proyecto{
+    width: 90%;
+  }
+  .tituloProyecto {
+    width: 40%;
+    font-size: 2.5vw;
+  }
+  .imgProyecto{
+    width: 100%;
+  }
+ 
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
