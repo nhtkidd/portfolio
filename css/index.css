@@ -175,9 +175,9 @@ li {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .menu {
-    width: 70%;
-    left: 15%;
-    right: 15%;
+    width: 80%;
+    left: 10%;
+    right: 10%;
     padding: 1.5vh 1vw 1.5vh 1vw;
   }
   li {
