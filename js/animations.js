@@ -20,3 +20,4 @@ ScrollReveal().reveal(".whoim", {
 
 ScrollReveal().reveal(".info", { reset: true, duration: 600 });
 ScrollReveal().reveal(".email", { reset: true, duration: 600 });
+
