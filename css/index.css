@@ -352,7 +352,7 @@
 
 .skills-stack {
   width: 100%;
-  height: 110vh;
+  height: fit-content;
 }
 .skills-stack > h4 {
   font-weight: 800;
