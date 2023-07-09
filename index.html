@@ -77,10 +77,13 @@
     />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/scroll.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <script src="js/cursor.js"></script>
     <link
-      href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,1,300&display=swap"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://unpkg.com/scrollreveal@4"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
@@ -90,10 +93,28 @@
     />
     <title>Jesús Mendoza</title>
   </head>
-  <body class="position-relative" style="background-color: #0b0b0b">
-    <canvas class="noise"></canvas>
+  <body class="full-body" data-scroll-container>
+    <header>
+      <div id="aviable">
+        <div class="items">
+          <span class="abiavle-circle"></span>
+          <p>Available to work</p>
+        </div>
+      </div>
+      <div id="home"><h1>Based in MX</h1></div>
+      <div id="menu">
+        <ul class="sections">
+          <li><p class="title-sections">Jesús</p></li>
+          <li><a href="#welcome">Home</a></li>
+          <li><a href="#welcome">About</a></li>
+          <li><a href="#welcome">Skills</a></li>
+          <li><a href="#welcome">Work</a></li>
+          <li><a href="#welcome">Contact</a></li>
+        </ul>
+      </div>
+    </header>
     <!-- Menu -->
-    <div class="menu d-flex justify-content-center align-items-center">
+    <!-- <div class="menu d-flex justify-content-center align-items-center">
       <ul class="d-flex flex-row p-0 m-2">
         <li class="nav-item ps-1 pe-2">
           <a class="navItem nav-link" aria-current="true" href="#aboutme"
@@ -107,123 +128,146 @@
           <a class="navItem nav-link" href="#contact">Contacto</a>
         </li>
       </ul>
+    </div> -->
+
+    <span id="circle" class="circle"></span>
+    <!-- Welcome -->
+    <div id="welcome" class="welcome">
+      <div class="first-conteiner-welcome">
+        <h2>I'm</h2>
+      </div>
+      <div class="second-conteiner-welcome">
+        <div
+          class="svg-circle"
+          data-scroll
+          data-scroll-direction="vertical"
+          data-scroll-speed="5"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 500 500"
+          >
+            <defs>
+              <path
+                d="M243.2, 382.4c-74.8,   
+              0-135.5-60.7-135.5-135.5s60.7-135.5,135.5-135.5s135.5, 60.7, 135.5,
+              135.5 S318, 382.4, 243.2, 382.4z"
+                id="textcircle"
+              />
+            </defs>
+            <text dy="10" textLength="1200" class="style-defs">
+              <textPath xlink:href="#textcircle">
+                a Dev · a Dev · a Dev · a Dev · a Dev · a Dev · a Dev · a Dev ·
+                a Dev · a Dev · a Dev · a Dev · a Dev
+              </textPath>
+            </text>
+          </svg>
+        </div>
+        <div class="my-name">
+          <h1>JESÚS</h1>
+        </div>
+      </div>
+      <div class="third-conteiner-welcome">
+        <h1>MENDOZA</h1>
+      </div>
+      <!-- <h1 class="hello-parph">MENDOZA</h1> -->
     </div>
 
-    <div id="butter">
-      <!-- Welcome -->
-      <div id="bienvenida " class="bienvenida">
-        <div class="wrapper">
-          <h1 class="soyDes">
-            Jesús <br />
-            Mendoza
-          </h1>
-          <div class="itemswrapper">
-            <div class="itemCircle">
-              <p>Front-end</p>
-            </div>
-            <div class="itemCircle">
-              <p>UX/UI</p>
-            </div>
-            <div class="itemCircle">
-              <p>Dev</p>
-            </div>
-            <div class="itemCircle">
-              <p>Freelance</p>
-            </div>
-          </div>
-        </div>
+    <!-- about me -->
+    <div class="about-me-guess">
+      <h1 data-scroll data-scroll-direction="horizontal" data-scroll-speed="6">
+        Ok, here i go
+      </h1>
+      <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="-6">
+        i'm ready <span>(i guess)</span>
+      </h2>
+    </div>
+    <div class="about-me">
+      <div data-scroll data-scroll-speed="4" class="about-me-presentation">
+        <h3>
+          I <span>love making unique content</span> that everybody can enjoy
+          when they enter into a website and as you can see, I enjoyed a lot
+          making this site for me, <span>and for you</span>.
+        </h3>
       </div>
-      <!-- about me -->
-      <div id="aboutme" class="sobremi">
-        <div class="presentacion d-flex flex-row">
-          <div class="d-flex align-items-center p-sm-5 p-3" style="width: 60%">
-            <h1 class="whoim">
-              Hey! Soy <span class="mainName"> Jesús Mendoza Silva</span>, un
-              desarrollador front-end, enfocado en crear experiencias únicas en
-              cada uno de mis trabajos.
-            </h1>
-          </div>
-          <div class="imgSobreMi" style="width: 40%">
-            <img class="imgYo" src="img/yo.jpeg" alt="Jesús Mendoza Silva" />
-          </div>
+      <div class="about-me-more">
+        <div class="who-word">
+          <h4
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="-2"
+          >
+            WHO I'M?
+          </h4>
         </div>
-        <div class="w-100 p-5" style="height: auto; font-size: 1em">
-          <div class="infoConteiner d-flex justify-content-left text-justify">
-            <p class="info">
-              Tengo 21 años y resido en la ciudad de Coatzacoalcos, me he
-              formado en este mundo através de la universidad y ser autodidacta.
+        <div class="about-me-information">
+          <div class="who-im">
+            <p>
+              Hey, i'm Jesús, a web full-stack developer, focusing on creating
+              unique experiences in each of my works,I always seeking new trends
+              and updates in technologies, so I really enjoy learning whenever I
+              have the opportunity.
+            </p>
+            <p>
+              With 2 years of experience with web design, i have had the
+              opportunity to work with different projects.
+            </p>
+            <p>
+              I have recently completed my degree in Software Management and
+              Development Engineering, and I am in search of new projects that
+              will bring out the best in me.
             </p>
           </div>
-          <div class="d-flex align-items-end flex-column">
-            <div class="infoConteiner d-flex justify-content-left text-justify">
-              <p class="info">
-                Actualmente terminé la  carrera de Ingenieria en Gestión y
-                Desarrollo de Software en la Universidad Técnologica del Sureste
-                de Veracruz
-              </p>
-            </div>
-          </div>
-          <div class="d-flex justify-content-sm-center align-content-center">
-            <div class="infoConteiner">
-              <p class="info">
-                Además del front end, me he desarrollado en otras tecnologias y
-                habilidades que me ayudan a comepetir en el campo laboral
-              </p>
-            </div>
-          </div>
           <div
-            class="d-flex justify-content-sm-start justify-content-end align-content-center"
+            class="photo"
+            data-scroll
+            data-scroll-direction="vertical"
+            data-scroll-speed="1"
           >
-            <div class="infoConteiner">
-              <p class="info">
-                Soy una persona que todo el tiempo está busando nuevas
-                tendendicias y actualizaciones en tecnologias, por lo que me
-                gusta mucho aprender cada que tengo la oportunidad
-              </p>
-            </div>
+            <img src="/img/jesus-mendoza.jpeg" />
           </div>
-        </div>
-        <!-- cv -->
-        <div class="d-flex flex-row w-100 h-auto">
-          <!-- Hard Skills -->
-          <div class="w-50">
-            <div class="p-5 contenedorInfo" style="height: 50%">
-              <div class="d-flex flex-row-reverse" style="height: 50%">
-                <span class="titulo skills">Hard Skills</span>
-              </div>
-              <div class="IconForCV"></div>
-            </div>
-            <div class="p-5 d-flex flex-row-reverse" style="height: 30%">
-              <span class="titulo skills">Soft Skills</span>
-            </div>
-          </div>
-          <div class="w-50 skills" style="height: 90vh">
-            <div class="d-flex flex-column p-5" style="height: 50%">
-              <span>- HTML5</span>
-              <span>- JS</span>
-              <span>- CSS</span>
-              <span>- PHP</span>
-              <span>- React JS</span>
-              <span>- React Native</span>
-              <span>- Node Js</span>
-              <span>- Laravel</span>
-              <span>- Tailwind CSS</span>
-              <span>- Bootstrap</span>
-              <span>- MySQL</span>
-              <span>- Mongo DB</span>
-            </div>
-            <div class="d-flex flex-column p-5" style="height: 30%">
-              <span>- Enfoque</span>
-              <span>- Ambicion</span>
-              <span>- Toma de desciciones</span>
-              <span>- Creatividad</span>
-            </div>
-          </div>
-          <!-- -->
         </div>
       </div>
-      <!-- My work -->
-      <div
+    </div>
+    <!-- SKILLS -->
+    <div class="skills">
+      <span
+        id="first-span"
+        data-scroll
+        data-scroll-direction="horizontal"
+        data-scroll-speed="-6"
+        >Do you wanna see? Do you wanna see? Do you wanna see?</span
+      >
+
+      <span
+        id="second-span"
+        data-scroll
+        data-scroll-direction="horizontal"
+        data-scroll-speed="6"
+        >What i know What i know What i know What i know</span
+      >
+      <span
+        id="third-span"
+        data-scroll
+        data-scroll-direction="horizontal"
+        data-scroll-speed="-6"
+        >Skills Skills Skills Skills Skills</span
+      >
+    </div>
+    <!-- WORK -->
+    <div class="skills-stack">
+      <h4
+      data-scroll
+      data-scroll-direction="horizontal"
+      data-scroll-speed="-5"
+    >
+       My Stack
+    </h4>
+    </div>
+
+    <!-- My work -->
+    <!-- <div
         id="myWork"
         class="myWork d-flex justify-content-center flex-column align-items-center"
       >
@@ -286,12 +330,11 @@
             </div>
           </div>
         </div>
-        <a
-          href='https://churro-dog.com/'
+        <div
           id="project2"
           class="proyecto d-flex flex-sm-row flex-column justify-content-center align-items-center"
         >
-          <div class="tituloProyecto p-2" href='https://churro-dog.com/'>
+          <div class="tituloProyecto p-2">
             <p class="titulo text-end">ChurroDog</p>
             <p class="text-end">
               E-comerce dirigido a la venta de comida organica para perros.
@@ -381,9 +424,8 @@
           <div class="foto d-grid align-items-center">
             <img class="imgProyecto" src="img/churrodog.png" alt="" />
           </div>
-        </a>
-        <a
-          href='https://nhtkidd.github.io/LysergicMindStudio/'
+        </div>
+        <div
           id="project1"
           class="proyecto d-flex flex-sm-row flex-column justify-content-center align-items-center"
         >
@@ -439,9 +481,8 @@
               </div>
             </div>
           </div>
-        </a>
-        <a
-          href='https://www.proveicydet.gob.mx/'
+        </div>
+        <div
           id="project4"
           class="proyecto d-flex flex-sm-row flex-column justify-content-center align-items-center"
         >
@@ -524,9 +565,9 @@
             <img class="imgProyecto" src="img/proveicydet.png" alt="" />
           </div>
         </div>
-      </a>
-      <!-- Contact me -->
-      <div
+      </div> -->
+    <!-- Contact me -->
+    <!-- <div
         id="contact"
         class="contact d-flex justify-content-center align-items-center"
       >
@@ -567,15 +608,26 @@
             ></a>
           </div>
         </div>
-      </div>
-    </div>
+      </div> -->
   </body>
   <!-- JavaScript Bundle with Popper -->
+  <script src="js/cursor.js"></script>
   <script src="js/index.js"></script>
   <script src="js/animations.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-    crossorigin="anonymous"
-  ></script>
+
+  <script src="
+  https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+  "></script>
+  <link
+    href="
+  https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+  "
+    rel="stylesheet"
+  />
+
+  <!-- unpkg -->
+  <script src="https://unpkg.com/@barba/core"></script>
+
+  <!-- jsdelivr -->
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 </html>

@@ -1,331 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
-  font-family: "Clash Display", sans-serif;
-  color: #fefefe;
+  color: #1e1e1e;
+  font-family: "Pathway Extreme", sans-serif;
+}
+
+.circle {
+  position: absolute;
+  background-color: #1e1e1e;
+  border: solid 1px #e2e2e2;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.full-body {
+  background-color: #e2e2e2;
   scroll-behavior: smooth;
-}
-.body{
-  scroll-behavior: smooth;
-}
-canvas {
-  position: fixed;
-  opacity: 0.1;
-  z-index: 9999;
-  pointer-events: none;
-  user-select: none;
-}
-/* Menú */
-.menu {
-  width: 25%;
-  height: auto;
-  position: fixed;
-  z-index: 9999;
-  margin-top: 87vh;
-  left: 37%;
-  right: 37%;
-  padding: 1.5vh 1vw 1.5vh 1vw;
-
-  border-radius: 15px;
-  background: rgba(58, 57, 57, 0.5);
-  backdrop-filter: blur(5px);
-
-  font-weight: 500;
-}
-li {
-  font-size: 1.2vw;
-  list-style-type: none;
-}
-.nav-item:hover {
-  color: #fefefe59;
+  background-image: url(../img/noise.png);
+  background-position: 50% 50%;
+  background-size: 15%;
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
-/* Bienvenida */
-.bienvenida {
-  width: 100%;
+.welcome {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 12%;
+}
+
+.first-conteiner-welcome {
+  width: 100%;
+  height: 15vh;
+}
+.first-conteiner-welcome h2 {
+  margin: 0px;
+  padding: 0px;
+  font-weight: 800;
+  font-size: 10em;
+}
+
+.second-conteiner-welcome {
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.svg-circle {
+  width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 10%;
 }
-.wrapper {
+.style-defs {
+  font-size: 10px;
+  letter-spacing: 22px;
+}
+.svg-circle svg {
+  animation-name: rotate;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.my-name {
+  width: 50%;
+  height: 100%;
+  display: flex;
+}
+
+.my-name h1 {
+  margin: 0px;
+  padding: 0px;
+  font-weight: 800;
+  font-size: 16em;
+}
+
+.third-conteiner-welcome {
   width: 100%;
+  height: 35vh;
+}
+.third-conteiner-welcome h1 {
+  margin: 0px;
+  padding: 0px;
+  font-weight: 800;
+  font-size: 22em;
+}
+/* QUERYS PARA CELULAR */
+@media only screen and (max-width: 600px) {
+  .welcome {
+    background-color: red;
+    align-items: end;
+    justify-content: end;
+  }
+  .first-conteiner-welcome {
+    width: 100%;
+    height: 5vh;
+  }
+  .first-conteiner-welcome h2 {
+    font-size: 3em;
+  }
+
+  .second-conteiner-welcome {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .svg-circle {
+    width: 40%;
+  }
+  .style-defs {
+    font-size: 1.5em;
+    letter-spacing: 22px;
+  }
+
+  .my-name {
+    display: flex;
+    align-items: center;
+  }
+
+  .my-name h1 {
+    font-size: 4em;
+  }
+  .third-conteiner-welcome {
+    height: 15vh;
+  }
+  .third-conteiner-welcome h1 {
+    font-size: 4.5em;
+  }
+}
+
+/*------------------------------- ABOUT ME ----------------------------------------- */
+
+.about-me-guess {
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  text-align: center;
-
-
 }
-.bienvenida h1 {
-  font-size: 10vw;
-}
-.soyDes {
-  font-weight: bold;
+/* QUERYS PARA CEL */
+@media only screen and (max-width: 600px) {
+  .about-me-guess {
+  }
 }
 
-.itemswrapper {
+.about-me {
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 
-.itemswrapper p{
-  margin-top: 0; 
-  margin-bottom: 0;
+.about-me > .about-me-presentation {
+  width: 50%;
+  height: 100%;
 }
 
-.itemCircle{
-  margin: 5px;
-  width: 10vw;
-  height: auto;
-  border-radius: 15px;
-
-  border:1px solid white;
+.about-me .about-me-presentation > h3 {
+  padding: 15% 40% 0% 10%;
+  font-weight: 700;
+  font-size: 2.5em;
 }
-/* sobre mi */
-.sobremi {
+.about-me .about-me-presentation > h3 > span {
+  font-weight: 500;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.about-me > .about-me-more {
+  width: 50%;
+  height: 100%;
+}
+.about-me > .about-me-more .who-word {
   width: 100%;
   height: auto;
-  position: relative;
 }
-.presentacion {
-  height: 100vh;
-}
-
-.whoim {
-  font-size: 4vw;
+.about-me > .about-me-more .who-word h4 {
+  font-weight: 800;
+  font-size: 10em;
 }
 
-.imgSobreMi {
+.about-me > .about-me-more .about-me-information {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.about-me .about-me-more .about-me-information > .who-im {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  text-align: left;
+  gap: 3%;
+}
+.about-me .about-me-more .about-me-information > .photo {
+  width: 60%;
+  height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
+}
+.about-me .about-me-more .about-me-information > .photo img {
+  width: 90%;
+  height: auto;
 }
 
-.imgYo {
-  width: 90%;
-  filter: grayscale(100%);
+@media only screen and (max-width: 600px) {
+  .about-me {
+    flex-direction: column;
+    height: auto;
+  }
+  .about-me > .about-me-presentation {
+    width: 100%;
+  }
+  .about-me .about-me-presentation > h3 {
+    padding: 5% 10% 0% 2%;
+    font-weight: 700;
+    font-size: 1.8em;
+    text-align: left;
+  }
+  .about-me > .about-me-more .who-word h4 {
+    display: none;
+  }
+  .about-me > .about-me-more .about-me-information {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about-me .about-me-more .about-me-information > .who-im {
+    padding: 5% 5% 5% 5%;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .about-me .about-me-more .about-me-information > .photo {
+    padding: 5% 5% 5% 5%;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+  .about-me .about-me-more .about-me-information > .photo img {
+    width: 100%;
+  }
 }
 
 .skills {
-  font-size: 1.2vw;
-}
-.mainName,
-.titulo {
-  color: #fffc0e;
-  font-style: italic;
-  font-weight: 600;
-}
-.infoConteiner {
-  width: 25%;
-}
-.info {
-  font-size: 1.2vw;
-}
-
-/* Mi trabajo */
-.myWork {
-  width: 100%;
-  height: auto;
-}
-.proyecto {
-  width: 80%;
-  height: auto;
-  margin-bottom: 5%;
-    text-decoration:none;
-}
-.foto {
-  width: 50%;
-}
-.imgProyecto {
-  width: 100%;
-  transition: all 100ms;
-}
-.tituloProyecto {
-  width: 50%;
-  font-size: 1.3vw;
-}
-
-.tecnologias {
-  width: 100%;
-  height: 20vh;
-}
-.icon {
-  width: 2.5vw;
-  padding-left: 5%;
-  transition: all 100ms;
-  fill: #504d4d;
-}
-
-/* contatco */
-.contact {
   width: 100%;
   height: 100vh;
-}
-.listo {
-  font-size: 1.3vw;
-}
-.email {
-  color: white;
-  font-size: 5vw;
-  font-weight: 700;
-  transition: all 50ms;
-}
-.email:hover {
-  color: #fffc0e;
-  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
 }
 
-#cohete {
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-.email:hover #cohete {
-  transition: transform 0.3s ease;
-  transform: translate(390%, -80%);
-}
-
-.iconContacto {
-  width: 5vw;
-  padding-left: 5%;
-  transition: all 100ms;
-  fill: #504d4d;
+.skills > span {
+  font-size: 11em;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: clip;
+  font-weight: 800;
 }
 
-.iconContacto:hover {
-  fill: #fffc0e;
+.skills-stack{
+  width: 100%;
+  height: 100vh;
+
+}
+.skills-stack > h4{
+  font-weight: 800;
+  font-size: 10em;
 }
 
-/* responsive */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .menu {
-    width: 80%;
-    left: 10%;
-    right: 10%;
-    padding: 1.5vh 1vw 1.5vh 1vw;
-  }
-  li {
-    font-size: 3vw;
-  }
-  /* bienvenida */
-  .bienvenida h1 {
-    font-size: 9vw;
-  }
-  .soyDes {
-    font-weight: bold;
-  }
-  .itemswrapper {
-    font-size: 3vw;
-  }
 
-  .itemCircle{
-    width: 20vw;
-  }
-  /* sobre mi  */
-  .presentacion {
-    justify-content: start;
-    align-items: flex-start;
-    height: auto;
-  }
-  .whoim {
-    padding: 0;
-  }
-  .infoConteiner {
-    width: 50%;
-  }
-  .info {
-    font-size: 3vw;
-  }
-  .skills {
-    font-size: 3vw;
-  }
-  .tecnologias {
-    height: auto;
-  }
-/* proyectos */
-  .foto {
-    width: 100%;
-  }
 
-  .proyecto{
-    width: 90%;
-  }
-  .tituloProyecto {
-    width: 80%;
-    font-size: 4vw;
-  }
-  /* contacto */
-  .listo {
-    font-size: 3.5vw;
-  }
-  .email {
-    font-size: 7vw;
-  }
-  .icon {
-    width: 5vw;
-  }
-  .iconContacto {
-    width
-    : 8vw;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 990px) {
-  .menu {
-    width: 40%;
-    left: 30%;
-    right: 30%;
-    padding: 1.5vh 1vw 1.5vh 1vw;
-  }
-  li {
-    font-size: 2vw;
-    list-style-type: none;
-  }
-  /*  */
-  .bienvenida h1 {
-    font-size: 8vw;
-  }
-  .itemswrapper {
-    font-size: 2vw;
-  }
-  .itemCircle{
-    width: 20vw;
-  }
-  .presentacion {
-    height: auto;
-  }
-  .info {
-    font-size: 2vw;
-  }
-  .skills {
-    font-size: 2vw;
-  }
-  /* proyecto */
-  .proyecto{
-    width: 90%;
-  }
-  .tituloProyecto {
-    width: 40%;
-    font-size: 2.5vw;
-  }
-  .imgProyecto{
-    width: 100%;
-  }
- 
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-}
