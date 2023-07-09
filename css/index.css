@@ -144,6 +144,22 @@
     font-size: 4.5em;
   }
 }
+/*-qerys para laptop-*/
+@media only screen and (min-width: 992px) {
+  .first-conteiner-welcome h2 {
+    font-size: 6em;
+  }
+  .style-defs {
+    font-size: 0.7em;
+    letter-spacing: 22px;
+  }
+  .my-name h1 {
+    font-size: 11em;
+  }
+  .third-conteiner-welcome h1 {
+    font-size: 15em;
+  }
+}
 
 /*------------------------------- ABOUT ME ----------------------------------------- */
 
@@ -273,6 +289,20 @@
     width: 100%;
   }
 }
+/*-qerys para laptop-*/
+@media only screen and (min-width: 992px) {
+  .about-me .about-me-presentation > h3 {
+    font-size: 1.8em;
+    text-align: left;
+  }
+  .about-me > .about-me-more .who-word h4 {
+    font-weight: 800;
+    font-size: 7em;
+  }
+  .about-me .about-me-more .about-me-information .who-im > p {
+    font-size: 0.7em;
+  }
+}
 
 .skills {
   width: 100%;
@@ -293,15 +323,92 @@
   font-weight: 800;
 }
 
-.skills-stack{
+.skills-stack {
   width: 100%;
-  height: 100vh;
-
+  height: 200vh;
 }
-.skills-stack > h4{
+.skills-stack > h4 {
   font-weight: 800;
   font-size: 10em;
 }
+.skills-list{
+  width: 100%;
+  height: 100%;
+}
+.skill-list-container {
+  width: 100%;
+  height: 100%;
+}
+.skill-list-container > ul {
+  padding: 2%;
+  margin: 0px;
+  text-align: left;
+}
+.skill-list-container .list > li {
+  text-align: left;
+  border-color: rgba(0, 0, 0, 0.588);
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-radius: 15px;
+  width: 100%;
 
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
 
+}
 
+.skill-list-container .list li > .first-skill-intern{
+  width: 50%;
+  height: auto;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  
+}
+.skill-list-container .list li .first-skill-intern span{
+  font-size: 2em;
+  font-weight: 400;
+}
+.skill-list-container .list li .first-skill-intern p{
+  font-size: 3em;
+  font-weight: 600;
+}
+.skill-list-container .list li > .second-skill-intern{
+  justify-content: end;
+  width: 50%;
+  height: auto;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+.skill-list-container .list li .second-skill-intern span{
+  font-size: 2em;
+  font-weight: 400;
+}
+.skill-list-container .list li .second-skill-intern p{
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.skills-joke{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*-qerys para laptop-*/
+@media only screen and (min-width: 992px) {
+  .skills > span {
+    font-size: 9em;
+    font-weight: 800;
+  }
+  .skills-stack > h4 {
+    font-weight: 800;
+    font-size: 7em;
+  }
+}
