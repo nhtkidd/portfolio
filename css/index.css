@@ -4,15 +4,36 @@
   font-family: "Pathway Extreme", sans-serif;
 }
 
-.circle {
-  position: absolute;
-  background-color: #1e1e1e;
-  border: solid 1px #e2e2e2;
-  width: 30px;
-  height: 30px;
+.ball {
+  border: solid 1px grey;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
+.run-animation {
+  animation: my-animation 2s ease;
+}
+
+@keyframes my-animation {        
+  0% {
+    width:16px
+  }
+  50% {
+    width: 40px
+  }
+
+  100% {
+    width: 16px;
+  }
+
+  }
 .full-body {
   background-color: #e2e2e2;
   scroll-behavior: smooth;
@@ -27,7 +48,10 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: 12%;
+
+  align-items: end;
+  justify-content: end;
+ 
 }
 
 .first-conteiner-welcome {
@@ -145,7 +169,7 @@
   }
 }
 /*-qerys para laptop-*/
-@media only screen and (min-width: 992px) {
+@media (min-width: 769px) and (max-width: 1025px)  {
   .first-conteiner-welcome h2 {
     font-size: 6em;
   }
@@ -154,10 +178,10 @@
     letter-spacing: 22px;
   }
   .my-name h1 {
-    font-size: 11em;
+    font-size: 8em;
   }
   .third-conteiner-welcome h1 {
-    font-size: 15em;
+    font-size: 11.9em;
   }
 }
 
@@ -290,17 +314,17 @@
   }
 }
 /*-qerys para laptop-*/
-@media only screen and (min-width: 992px) {
+@media (min-width: 769px) and (max-width: 1025px)  {
   .about-me .about-me-presentation > h3 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     text-align: left;
   }
   .about-me > .about-me-more .who-word h4 {
     font-weight: 800;
-    font-size: 7em;
+    font-size: 5em;
   }
   .about-me .about-me-more .about-me-information .who-im > p {
-    font-size: 0.7em;
+    font-size: 0.5em;
   }
 }
 

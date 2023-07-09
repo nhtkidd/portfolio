@@ -11,8 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(function() {
       xp += ((mouseX - xp) / 6);
       yp += ((mouseY - yp) / 6);
-      document.querySelector("#circle").style.left = xp + "px";
-      document.querySelector("#circle").style.top = yp + "px";
+      document.querySelector("#ball").style.left = xp + "px";
+      document.querySelector("#ball").style.top = yp + "px";
     }, 20);
   
   });
+
+  
