@@ -216,7 +216,7 @@
 .about-me .about-me-presentation > h3 {
   padding: 15% 40% 0% 10%;
   font-weight: 700;
-  font-size: 2.5em;
+  font-size: 2.1vw;
 }
 .about-me .about-me-presentation > h3 > span {
   font-weight: 500;
@@ -234,7 +234,7 @@
 }
 .about-me > .about-me-more .who-word h4 {
   font-weight: 800;
-  font-size: 10em;
+  font-size: 8.3vw;
 }
 
 .about-me > .about-me-more .about-me-information {
@@ -253,6 +253,9 @@
   justify-content: end;
   text-align: left;
   gap: 3%;
+}
+.about-me .about-me-more .about-me-information .who-im > p {
+  font-size: 0.8vw;
 }
 .about-me .about-me-more .about-me-information > .photo {
   width: 60%;
