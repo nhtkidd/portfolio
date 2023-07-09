@@ -62,7 +62,7 @@
   margin: 0px;
   padding: 0px;
   font-weight: 800;
-  font-size: 10em;
+  font-size: 160px;
 }
 
 .second-conteiner-welcome {
@@ -110,7 +110,7 @@
   margin: 0px;
   padding: 0px;
   font-weight: 800;
-  font-size: 16em;
+  font-size: 256px;
 }
 
 .third-conteiner-welcome {
@@ -121,7 +121,7 @@
   margin: 0px;
   padding: 0px;
   font-weight: 800;
-  font-size: 22em;
+  font-size: 352px;
 }
 /* QUERYS PARA CELULAR */
 @media only screen and (max-width: 600px) {
