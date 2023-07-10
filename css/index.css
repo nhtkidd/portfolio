@@ -575,11 +575,17 @@
   overflow: hidden;
   height: 100vh;
 }
+.works{
+
+width: fit-content;
+
+}
 
 .races {
   width: fit-content;
   display: flex;
-  flex-wrap: nowrap;
+
+
 }
 
 .races h2 {
@@ -594,10 +600,7 @@
 .races > .work-card {
   width: 90vw;
   height: 80vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-bottom: 1%;
 }
 
 .races .work-card > .work-container {
@@ -665,18 +668,24 @@
   .races .work-card > .work-container {
     flex-direction: column;
   }
+  .races > .work-card {
+    height: auto;
+    padding-bottom: 20%;
+  }
   .races .work-card .work-container > .container-img {
     width: 100%;
+    height: 30%;
   }
   .races .work-card .work-container > .container-info {
     width: 100%;
     padding: 10%;
   }
   .races .work-card .work-container .container-info .stack > span {
-    font-size: 2.5vw;
+    font-size: 2.2vw;
   }
   .races .work-card .work-container .container-info > p {
-    font-size: 3vw;
+    font-size: 2vw;
+    padding-top: 1%;
   }
   .races .work-card .work-container .container-info > a {
     font-size: 3vw;

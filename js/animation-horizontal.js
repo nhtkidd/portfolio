@@ -28,60 +28,6 @@ ScrollTrigger.defaults({ scroller: ".smooth-scroll" });
 
 
 
-// --- RED PANEL ---
-gsap.from(".line-1", {
-  scrollTrigger: {
-    trigger: ".line-1",
-    scrub: true,
-    start: "top bottom",
-    end: "top top",
-    onUpdate() {
-      console.log("Update")
-    }
-  },
-  scaleX: 0,
-  transformOrigin: "left center", 
-  ease: "none"
-});
-
-
-// --- ORANGE PANEL ---
-gsap.from(".line-2", {
-  scrollTrigger: {
-    trigger: ".orange",
-    scrub: true,
-    pin: true,
-    start: "top top",
-    end: "+=100%",
-    onUpdate() {
-      console.log("Update")
-    }
-  },
-  scaleX: 0, 
-  transformOrigin: "left center", 
-  ease: "none"
-});
-
-
-// --- PURPLE/GREEN PANEL ---
-var tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".purple",
-      scrub: true,
-      pin: true,
-      start: "top top",
-      end: "+=100%",
-      onUpdate() {
-        console.log("Update")
-      }
-    }
-  });
-
-tl.from(".purple p", {scale: 0.3, rotation:45, autoAlpha: 0, ease: "power2"})
-  .from(".line-3", {scaleX: 0, transformOrigin: "left center", ease: "none"}, 0)
-  .to(".purple", {backgroundColor: "#28a92b"}, 0);
-
-
 
 
 
@@ -106,7 +52,7 @@ const tween = gsap.to(races, {
 
 ScrollTrigger.create({
 	trigger:".racesWrapper",
-	start:"top 20%",
+	start:"top 10%",
 	end: () => `+=${getScrollAmount() * -1}`,
 	pin:true,
 	animation:tween,
