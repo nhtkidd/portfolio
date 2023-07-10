@@ -52,7 +52,7 @@ const tween = gsap.to(races, {
 
 ScrollTrigger.create({
 	trigger:".racesWrapper",
-	start:"top 10%",
+	start:"top 20%",
 	end: () => `+=${getScrollAmount() * -1}`,
 	pin:true,
 	animation:tween,
