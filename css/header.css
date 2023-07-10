@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  color: #1E1E1E;
+  font-family: 'Pathway Extreme', sans-serif;
+
+}
+
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 1%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-auto-rows: minmax(100px, auto);
+  z-index: 3;
+
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  margin-bottom: 0px !important;
+}
+
+
+#aviable {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+#aviable .items{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.items p {
+  font-size: 1em;
+  font-weight: 700;
+  height: 100%;
+  
+}
+
+.items .abiavle-circle  {
+  border: solid 1px white;
+  background-color: green;
+  width: 10px !important;
+  height: 10px;
+  border-radius: 50%;
+}
+
+
+
+#home {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  display: flex;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#home h1 {
+  font-size: 1em;
+  font-weight: 700;
+  height: 100%;
+  
+}
+
+
+
+
+#menu {
+  grid-column: 3 / 3;
+  grid-row: 1;
+  display: flex;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: end;
+}
+
+#menu h1 {
+  font-size: 1em;
+  font-weight: 700;
+  height: 100%;
+  
+}
+
+@media only screen and (max-width: 600px) {
+  #home{
+    display: none;
+  }
+  #menu {
+margin-top: 4%;
+  }
+  
+}

@@ -1,38 +1,69 @@
-const canvas = document.querySelector('canvas'),
-    ctx = canvas.getContext('2d')
+gsap.registerPlugin(ScrollTrigger);
 
-canvas.width = canvas.height = 128
+ScrollTrigger.defaults({
+  scroller: '[data-scroll-container]',
+  markers: false
+});
 
-resize();
-window.onresize = resize;
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    
+      mobile: {
+        breakpoint: 0,
+        smooth: true,
+  
+      },
+      tablet: {
+        breakpoint: 0,
+        smooth: true,
+       
+      },
+  });
 
-function resize() {
-    canvas.width = window.innerWidth * window.devicePixelRatio / 1
-    canvas.height = window.innerHeight * window.devicePixelRatio / 1
-    canvas.style.width = window.innerWidth + 'px'
-    canvas.style.height = window.innerHeight + 'px'
+// Update scroll position
+scroll.on( 'scroll', ( instance ) => {
+    ScrollTrigger.update();
+    document.documentElement.setAttribute( 'data-scrolling', instance.direction );
+});
+
+// Scroll position for ScrollTrigger
+ScrollTrigger.scrollerProxy( '[data-scroll-container]', {
+    scrollTop( value ) {
+        return arguments.length ? scroll.scrollTo( value, 0, 0 ) : scroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+    },
+    pinType: document.querySelector( '[data-scroll-container]' ).style.transform ? "transform" : "fixed"
+} );
+
+
+ScrollTrigger.addEventListener( 'refresh', () => scroll.update() );
+ScrollTrigger.refresh();
+
+const races = document.querySelector(".races");
+console.log(races.offsetWidth)
+
+function getScrollAmount() {
+	let racesWidth = races.scrollWidth;
+	return -(racesWidth - window.innerWidth);
 }
 
-
-function noise(ctx) {
-
-    const w = ctx.canvas.width,
-        h = ctx.canvas.height,
-        iData = ctx.createImageData(w, h),
-        buffer32 = new Uint32Array(iData.data.buffer),
-        len = buffer32.length
-    let i = 1
-
-    for (; i < len; i++)
-
-        if (Math.random() < 0.1) buffer32[i] = 0xffffffff;
-
-    ctx.putImageData(iData, 0, 0);
-}
+const tween = gsap.to(races, {
+	x: getScrollAmount,
+	duration: 3,
+	ease: "none",
+});
 
 
+ScrollTrigger.create({
+	trigger:".racesWrapper",
+	start:"top 20%",
+	end: () => `+=${getScrollAmount() * -1}`,
+	pin:true,
+	animation:tween,
+	scrub:1,
+	invalidateOnRefresh:true,
 
-(function loop() {
-    noise(ctx);
-    requestAnimationFrame(loop);
-})();
+})

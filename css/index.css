@@ -1,331 +1,808 @@
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Extreme:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
-  font-family: "Clash Display", sans-serif;
-  color: #fefefe;
+  color: #1e1e1e;
+  font-family: "Pathway Extreme", sans-serif;
+  margin: 0px;
+}
+
+.full-body {
+  background-color: #e2e2e2;
   scroll-behavior: smooth;
+  background-image: url(../img/noise.png);
+  background-position: 50% 50%;
+  background-size: 15%;
+  background-attachment: fixed;
 }
-.body{
-  scroll-behavior: smooth;
-}
-canvas {
-  position: fixed;
-  opacity: 0.1;
-  z-index: 9999;
-  pointer-events: none;
-  user-select: none;
-}
-/* Menú */
-.menu {
-  width: 25%;
-  height: auto;
-  position: fixed;
-  z-index: 9999;
-  margin-top: 87vh;
-  left: 37%;
-  right: 37%;
-  padding: 1.5vh 1vw 1.5vh 1vw;
-
-  border-radius: 15px;
-  background: rgba(58, 57, 57, 0.5);
-  backdrop-filter: blur(5px);
-
-  font-weight: 500;
-}
-li {
-  font-size: 1.2vw;
-  list-style-type: none;
-}
-.nav-item:hover {
-  color: #fefefe59;
-}
-
-/* Bienvenida */
-.bienvenida {
+.header {
   width: 100%;
+  position: fixed;
+  top: 0px;
+}
+
+.welcome {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  align-items: end;
+  justify-content: end;
+}
+
+.first-conteiner-welcome {
+  width: 100%;
+  height: 15vh;
+}
+.first-conteiner-welcome h2 {
+  margin: 0px;
+  padding: 0px;
+  font-weight: 800;
+  font-size: 9vw;
+}
+
+.second-conteiner-welcome {
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.svg-circle {
+  width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 10%;
 }
-.wrapper {
+.style-defs {
+  font-size: 10px;
+  letter-spacing: 22px;
+}
+.svg-circle svg {
+  animation-name: rotate;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.my-name {
+  width: 50%;
+  height: 100%;
+  display: flex;
+}
+
+.my-name h1 {
+  margin: 0px;
+  padding: 0px;
+  font-weight: 800;
+  font-size: 14vw;
+}
+
+.third-conteiner-welcome {
   width: 100%;
+  height: 35vh;
+}
+.third-conteiner-welcome h1 {
+  margin: 0px;
+  padding: 0px;
+  font-weight: 800;
+  font-size: 18.4vw;
+}
+/* QUERYS PARA CELULAR */
+@media only screen and (max-width: 600px) {
+  .welcome {
+    align-items: end;
+    justify-content: end;
+  }
+  .first-conteiner-welcome {
+    width: 100%;
+    height: 5vh;
+  }
+  .first-conteiner-welcome h2 {
+    font-size: 3em;
+  }
+
+  .second-conteiner-welcome {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .svg-circle {
+    width: 40%;
+  }
+  .style-defs {
+    font-size: 1.5em;
+    letter-spacing: 22px;
+  }
+
+  .my-name {
+    display: flex;
+    align-items: center;
+  }
+
+  .my-name h1 {
+    font-size: 4em;
+  }
+  .third-conteiner-welcome {
+    height: 15vh;
+  }
+  .third-conteiner-welcome h1 {
+    font-size: 4.5em;
+  }
+}
+/* QUERYS PARA TABLET */
+@media (min-width: 601px) and (max-width: 769px) {
+  .first-conteiner-welcome {
+    display: flex;
+    align-items: end;
+  }
+ 
+  .first-conteiner-welcome h2 {
+    font-size: 8vw;
+  }
+  .style-defs {
+    font-size: 2vw;
+    letter-spacing: 22px;
+  }
+  .my-name {
+    display: flex;
+    align-items: end;
+  }
+  .my-name h1 {
+    font-size: 14vw;
+  }
+  .third-conteiner-welcome {
+    height: 16vh;
+    display: flex;
+    align-items: end;
+  }
+  .third-conteiner-welcome h1 {
+    font-size: 18.5vw;
+  }
+}
+/*-qerys para laptop-*/
+@media (min-width: 769px) and (max-width: 1025px) {
+  .first-conteiner-welcome h2 {
+    font-size: 6em;
+  }
+  .style-defs {
+    font-size: 0.7em;
+    letter-spacing: 22px;
+  }
+  .my-name h1 {
+    font-size: 8em;
+  }
+  .third-conteiner-welcome h1 {
+    font-size: 11.9em;
+  }
+}
+
+/*------------------------------- ABOUT ME ----------------------------------------- */
+
+.about-me-guess {
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  text-align: center;
-
-
 }
-.bienvenida h1 {
-  font-size: 10vw;
-}
-.soyDes {
-  font-weight: bold;
+/* QUERYS PARA CEL */
+@media only screen and (max-width: 600px) {
+  .about-me-guess {
+  }
 }
 
-.itemswrapper {
+.about-me {
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: row;
+}
+
+.about-me > .about-me-presentation {
+  width: 50%;
+  height: 100%;
+}
+
+.about-me .about-me-presentation > h3 {
+  padding: 15% 40% 0% 10%;
+  font-weight: 700;
+  font-size: 2.1vw;
+}
+.about-me .about-me-presentation > h3 > span {
+  font-weight: 500;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.about-me > .about-me-more {
+  width: 50%;
+  height: 100%;
+}
+.about-me > .about-me-more .who-word {
+  width: 100%;
+  height: auto;
+}
+.about-me > .about-me-more .who-word h4 {
+  font-weight: 800;
+  font-size: 8.3vw;
+}
+
+.about-me > .about-me-more .about-me-information {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.about-me .about-me-more .about-me-information > .who-im {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  text-align: left;
+  gap: 3%;
+}
+.about-me .about-me-more .about-me-information .who-im > p {
+  font-size: 0.8vw;
+}
+.about-me .about-me-more .about-me-information > .photo {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.about-me .about-me-more .about-me-information > .photo img {
+  width: 90%;
+  height: auto;
+}
+/* QUERYS PARA CELULAR */
+@media only screen and (max-width: 600px) {
+  .about-me {
+    flex-direction: column;
+    height: 130vh;
+  }
+  .about-me > .about-me-presentation {
+    width: 100%;
+  }
+  .about-me .about-me-presentation > h3 {
+    padding: 5% 10% 50% 2%;
+    font-weight: 700;
+    font-size: 1.8em;
+    text-align: left;
+  }
+  .about-me > .about-me-more .who-word h4 {
+    display: none;
+  }
+  .about-me > .about-me-more .about-me-information {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about-me .about-me-more .about-me-information > .who-im {
+    padding: 5% 5% 5% 5%;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    text-align: left;
+    gap: 20px;
+  }
+  .about-me .about-me-more .about-me-information .who-im > p {
+    font-size: 4vw;
+  }
+
+  .about-me .about-me-more .about-me-information > .photo {
+    padding: 5% 5% 5% 5%;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+  .about-me .about-me-more .about-me-information > .photo img {
+    width: 100%;
+  }
+}
+/* QUERYS PARA TABLET */
+@media (min-width: 601px) and (max-width: 769px) {
+  .about-me {
+    flex-direction: column;
+   height: 120vh;
+  }
+  .about-me > .about-me-presentation {
+    width: 100%;
+  }
+  .about-me .about-me-presentation > h3 {
+    padding: 5% 10% 50% 2%;
+    font-weight: 700;
+    font-size: 1.8em;
+    text-align: left;
+  }
+  .about-me > .about-me-more .who-word h4 {
+    display: none;
+  }
+  .about-me > .about-me-more .about-me-information {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about-me .about-me-more .about-me-information > .who-im {
+    padding: 5% 5% 5% 5%;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    text-align: left;
+    gap: 20px;
+  }
+  .about-me .about-me-more .about-me-information .who-im > p {
+    font-size: 2vw;
+  }
+
+  .about-me .about-me-more .about-me-information > .photo {
+    padding: 5% 5% 5% 5%;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+  .about-me .about-me-more .about-me-information > .photo img {
+    width: 70%;
+  }
+}
+/*-qerys para laptop-*/
+@media (min-width: 769px) and (max-width: 1025px) {
+  .about-me .about-me-presentation > h3 {
+    font-size: 2vw;
+    text-align: left;
+  }
+  .about-me > .about-me-more .who-word h4 {
+    font-weight: 800;
+    font-size: 5em;
+  }
+  .about-me .about-me-more .about-me-information .who-im > p {
+    font-size: 0.8vw;
+  }
+}
+
+.skills {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   justify-content: center;
 }
 
-.itemswrapper p{
-  margin-top: 0; 
-  margin-bottom: 0;
-}
-
-.itemCircle{
-  margin: 5px;
-  width: 10vw;
-  height: auto;
-  border-radius: 15px;
-
-  border:1px solid white;
-}
-/* sobre mi */
-.sobremi {
+.skills > span {
+  font-size: 11em;
+  white-space: nowrap;
   width: 100%;
-  height: auto;
-  position: relative;
+  overflow: hidden;
+  text-overflow: clip;
+  font-weight: 800;
 }
-.presentacion {
+
+.skills-stack {
+  height: 100vh;
+  width: 100%;
+}
+.skills-stack > h4 {
+  display: none;
+}
+.list {
+  margin: 0px;
+  padding: 0px;
+  padding: 2%;
+}
+
+.list > li {
+  text-align: left;
+  border-color: rgba(0, 0, 0, 0.588);
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-radius: 15px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.list > li .first-skill-intern {
+  width: 50%;
+  height: auto;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+.skills-stack .list > li .first-skill-intern span {
+  font-size: 2em;
+  font-weight: 400;
+}
+.skills-stack .list > li .first-skill-intern p {
+  font-size: 3em;
+  font-weight: 600;
+}
+.skills-stack .list > li .second-skill-intern {
+  justify-content: end;
+  width: 50%;
+  height: auto;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+.skills-stack .list > li .second-skill-intern span {
+  font-size: 2em;
+  font-weight: 400;
+}
+.skills-stack .list > li .second-skill-intern p {
+  font-size: 3em;
+  font-weight: 600;
+}
+
+/* MEDIAQUERYS PARA CELULAR */
+@media only screen and (max-width: 600px) {
+  .skills {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .skills > span {
+    font-size: 14vw;
+  }
+  .skills-stack {
+    height: 90vh;
+    width: 100%;
+  }
+  .skills-list {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .list > li {
+    text-align: left;
+    border-color: rgba(0, 0, 0, 0.588);
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 15px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  .skills-stack .list li > .first-skill-intern,
+  .second-skill-intern {
+    align-items: end;
+  }
+  .skills-stack .list > li .first-skill-intern p {
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+  .skills-stack .list > li .second-skill-intern p {
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+  .skills-joke {
+    width: 100%;
+    height: 20%;
+  }
+}
+/* MEDIAQUERYS PARA TABLET */
+@media (min-width: 601px) and (max-width: 769px) {
+  .skills {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .skills > span {
+    font-size: 4vw;
+  }
+  .skills-stack {
+    height: 90vh;
+    width: 100%;
+  }
+  .skills-list {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .list > li {
+    text-align: left;
+    border-color: rgba(0, 0, 0, 0.588);
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 15px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  .skills-stack .list li > .first-skill-intern,
+  .second-skill-intern {
+    align-items: end;
+  }
+  .skills-stack .list > li .first-skill-intern p {
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+  .skills-stack .list > li .second-skill-intern p {
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+  .skills-joke {
+    width: 100%;
+    height: 20%;
+  }
+}
+/*-qerys para laptop-*/
+@media only screen and (min-width: 992px) {
+  .skills > span {
+    font-size: 9em;
+    font-weight: 800;
+  }
+}
+
+.racesWrapper {
+  overflow: hidden;
   height: 100vh;
 }
 
-.whoim {
-  font-size: 4vw;
+.races {
+  width: fit-content;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
-.imgSobreMi {
+.races h2 {
+  font-size: 30vw;
+  flex-shrink: 0;
+  padding-right: 0.3em;
+  padding-left: 0.3em;
+
+  margin: 0;
+}
+
+.races > .work-card {
+  width: 90vw;
+  height: 80vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.imgYo {
-  width: 90%;
-  filter: grayscale(100%);
+.races .work-card > .work-container {
+  width: 95%;
+  height: 90%;
+
+  border-radius: 20px;
+  border: solid 1px #1e1e1e;
+
+  display: flex;
+  flex-direction: row;
+}
+.races .work-card .work-container > .container-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+.races .work-card .work-container .container-img > img {
+  width: 100%;
+}
+.races .work-card .work-container > .container-info {
+  width: 40%;
+
+  padding: 2%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+
+  text-align: left;
+}
+.races .work-card .work-container .container-info > h3 {
+  font-weight: 800;
+}
+.races .work-card .work-container .container-info > .stack {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.races .work-card .work-container .container-info .stack > span {
+  font-size: 0.8vw;
 }
 
-.skills {
-  font-size: 1.2vw;
+.races .work-card .work-container .container-info > p {
+  font-size: 1vw;
+  text-align: justify;
+  padding-top: 10%;
 }
-.mainName,
-.titulo {
-  color: #fffc0e;
-  font-style: italic;
+.races .work-card .work-container .container-info > a {
+  font-size: 1.3vw;
+  color: #1e1e1e;
   font-weight: 600;
 }
-.infoConteiner {
-  width: 25%;
-}
-.info {
-  font-size: 1.2vw;
-}
-
-/* Mi trabajo */
-.myWork {
-  width: 100%;
-  height: auto;
-}
-.proyecto {
-  width: 80%;
-  height: auto;
-  margin-bottom: 5%;
-    text-decoration:none;
-}
-.foto {
-  width: 50%;
-}
-.imgProyecto {
-  width: 100%;
-  transition: all 100ms;
-}
-.tituloProyecto {
-  width: 50%;
+.races .work-card .work-container .container-info > a:hover {
   font-size: 1.3vw;
+  color: #1e1e1e4f;
+  font-weight: 600;
+  transition: 1s ease-out 10ms;
+}
+/* QUERYS PARA CELULAR */
+@media only screen and (max-width: 600px) {
+  .races .work-card > .work-container {
+    flex-direction: column;
+  }
+  .races .work-card .work-container > .container-img {
+    width: 100%;
+  }
+  .races .work-card .work-container > .container-info {
+    width: 100%;
+    padding: 10%;
+  }
+  .races .work-card .work-container .container-info .stack > span {
+    font-size: 2.5vw;
+  }
+  .races .work-card .work-container .container-info > p {
+    font-size: 3vw;
+  }
+  .races .work-card .work-container .container-info > a {
+    font-size: 3vw;
+  }
 }
 
-.tecnologias {
-  width: 100%;
-  height: 20vh;
-}
-.icon {
-  width: 2.5vw;
-  padding-left: 5%;
-  transition: all 100ms;
-  fill: #504d4d;
+#final {
+  width: 20vw !important;
+  height: 80vh;
 }
 
-/* contatco */
-.contact {
+.contact-me {
   width: 100%;
   height: 100vh;
 }
-.listo {
-  font-size: 1.3vw;
+.contact-me > .lets-work {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.email {
-  color: white;
-  font-size: 5vw;
+.contact-me .lets-work .word-by-word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.contact-me .lets-work .word-by-word > span {
+  font-size: 9vw;
+  font-weight: 800;
+}
+.contact-me > .lets-work > a {
+  font-size: 2vw;
+  text-decoration: none;
+  color: #1e1e1e;
+  background: linear-gradient(to right, rgb(202, 171, 150), rgb(211, 201, 159)),
+    linear-gradient(to right, rgb(110, 107, 107), rgb(0, 0, 0), rgb(43, 44, 46));
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.contact-me > .lets-work > a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+.contact-me > .foooter {
+  width: 100%;
+  height: 10%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.contact-me .foooter > div {
   font-weight: 700;
-  transition: all 50ms;
 }
-.email:hover {
-  color: #fffc0e;
+.contact-me .foooter > .social {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 2%;
+  flex-direction: column;
+}
+.contact-me .foooter .social > a {
   text-decoration: none;
+  color: #1e1e1e;
 }
-
-#cohete {
+.contact-me .foooter > .download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.contact-me .foooter .download > a {
   text-decoration: none;
-  transition: transform 0.3s ease;
+  color: #1e1e1e;
 }
-.email:hover #cohete {
-  transition: transform 0.3s ease;
-  transform: translate(390%, -80%);
+.contact-me .foooter > .portfolio {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: column;
+  padding: 2%;
+
 }
-
-.iconContacto {
-  width: 5vw;
-  padding-left: 5%;
-  transition: all 100ms;
-  fill: #504d4d;
-}
-
-.iconContacto:hover {
-  fill: #fffc0e;
-}
-
-/* responsive */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .menu {
-    width: 80%;
-    left: 10%;
-    right: 10%;
-    padding: 1.5vh 1vw 1.5vh 1vw;
-  }
-  li {
-    font-size: 3vw;
-  }
-  /* bienvenida */
-  .bienvenida h1 {
-    font-size: 9vw;
-  }
-  .soyDes {
-    font-weight: bold;
-  }
-  .itemswrapper {
-    font-size: 3vw;
-  }
-
-  .itemCircle{
-    width: 20vw;
-  }
-  /* sobre mi  */
-  .presentacion {
-    justify-content: start;
-    align-items: flex-start;
-    height: auto;
-  }
-  .whoim {
-    padding: 0;
-  }
-  .infoConteiner {
-    width: 50%;
-  }
-  .info {
-    font-size: 3vw;
-  }
-  .skills {
-    font-size: 3vw;
-  }
-  .tecnologias {
-    height: auto;
-  }
-/* proyectos */
-  .foto {
-    width: 100%;
-  }
-
-  .proyecto{
-    width: 90%;
-  }
-  .tituloProyecto {
-    width: 80%;
-    font-size: 4vw;
-  }
-  /* contacto */
-  .listo {
-    font-size: 3.5vw;
-  }
-  .email {
-    font-size: 7vw;
-  }
-  .icon {
-    width: 5vw;
-  }
-  .iconContacto {
-    width
-    : 8vw;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 990px) {
-  .menu {
-    width: 40%;
-    left: 30%;
-    right: 30%;
-    padding: 1.5vh 1vw 1.5vh 1vw;
-  }
-  li {
-    font-size: 2vw;
-    list-style-type: none;
-  }
-  /*  */
-  .bienvenida h1 {
-    font-size: 8vw;
-  }
-  .itemswrapper {
-    font-size: 2vw;
-  }
-  .itemCircle{
-    width: 20vw;
-  }
-  .presentacion {
-    height: auto;
-  }
-  .info {
-    font-size: 2vw;
-  }
-  .skills {
-    font-size: 2vw;
-  }
-  /* proyecto */
-  .proyecto{
-    width: 90%;
-  }
-  .tituloProyecto {
-    width: 40%;
-    font-size: 2.5vw;
-  }
-  .imgProyecto{
-    width: 100%;
-  }
+.contact-me .foooter .portfolio > p {
+  text-decoration: none;
+  color: #1e1e1e;
  
 }
+@media only screen and (max-width: 600px) {
+  .contact-me .lets-work .word-by-word > span {
+    font-size: 11vw;
+  }
+  .contact-me > .lets-work > a {
+    font-size: 3vw;
+  }
+  .contact-me .foooter > .social {
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-}
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .contact-me .foooter .social > a {
+    padding: 0%;
+    font-size: 10px;
+  }
+  .contact-me .foooter .download > a {
+    padding: 0%;
+    font-size: 10px;
+  }.contact-me .foooter > .portfolio {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .contact-me .foooter .portfolio > p {
+    padding: 0%;
+    font-size: 10px;
+   
+  }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
 }
