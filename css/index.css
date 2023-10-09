@@ -392,6 +392,7 @@
   width: 100%;
   height: 100vh;
 
+
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -408,7 +409,7 @@
 }
 
 .skills-stack {
-  height: 100vh;
+  height: auto;
   width: 100%;
 }
 .skills-stack > h4 {
@@ -604,7 +605,7 @@
   height: 90%;
 
   border-radius: 20px;
-  border: solid 1px #1e1e1e;
+
 
   display: flex;
   flex-direction: row;
@@ -613,7 +614,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  width: 55%;
 }
 .races .work-card .work-container .container-img > img {
   width: 100%;
@@ -670,7 +671,7 @@
   }
   .races .work-card .work-container > .container-img {
     width: 100%;
-    height: 30%;
+    height: 35%;
   }
   .races .work-card .work-container > .container-info {
     width: 100%;
